@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- Resume form  -->
+    <h1>Resume Builder</h1>
+    <p class="text-center">note*: Fill all information are mendatory for build resume</p>
+    <div class="container">
+        <div class="row">
+            <div class="w-12">
+                <form action="" method="post" id="myForm">
+                    <fieldset class="d-flex flex-wrap">
+                        <table class="main">
+                            <tr>
+                                <td>
+                                    <label for="">Name: </label>
+                                </td>
+                                <td>
+                                    <input type="text" name="name" placeholder="Enter name..." id="name">
+                                </td>
+                                <td>
+                                    <label for="">Job Role: </label>
+                                </td>
+                                <td>
+                                    <input type="text" name="jobRole" placeholder="Enter job role..." id="jobRole">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="">Phone no.: </label>
+                                </td>
+                                <td>
+                                    <input type="number" name="phone" placeholder="Enter your phone no..." id="phone">
+                                </td>
+                                <td>
+                                    <label for="">Email ID: </label>
+                                </td>
+                                <td>
+                                    <input type="email" name="email" placeholder="Enter your email..." id="email">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="">Location: </label>
+                                </td>
+                                <td>
+                                    <input type="text" name="location" placeholder="Enter address..." id="location">
+                                </td>
+
+                                <td>
+                                    <label for="">Linkedin Profile Link: </label>
+                                </td>
+                                <td>
+                                    <input type="text" name="lnLink" placeholder="Enter linkedin profile link..." id="lnLink">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="">Github Profile Link: </label>
+                                </td>
+                                <td>
+                                    <input type="text" name="gitLink" placeholder="Enter github profile link..." id="gitLink">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="">About: </label>
+                                </td>
+                                <td colspan="3">
+                                    <textarea name="about" id="aboutInfo" placeholder="Write 250 character about you..."
+                                        style="width: 650px; height: 229px;"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="skills">Skills:</label>
+                                </td>
+                                <td colspan="3">
+                                    <textarea id="skills" name="skills" placeholder="e.g. HTML, CSS, JavaScript, Python"
+                                        style="width: 650px;"></textarea><br><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="lang">Language:</label>
+                                </td>
+                                <td colspan="3">
+                                    <textarea id="lang" name="language" placeholder="e.g. English, Gujarati, Hindi"
+                                        style="width: 650px;"></textarea><br><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="">Degree:</label>
+                                </td>
+                                <td colspan="3">
+                                    <select name="degree" id="degree">
+                                        <option value="Select degree">Select degree</option>
+                                        <option value="BCA(Bechelor of Computer Application)">BCA(Bechelor of Computer
+                                            Application)</option>
+                                        <option value="BBA(Bechelor of Business Administration)">BBA(Bechelor of
+                                            Business Administration)</option>
+                                        <option value="BCOM(Bechelor of Commerce)">BCOM(Bechelor of Commerce)</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="">University</label>
+                                </td>
+                                <td colspan="3">
+                                    <textarea name="university" id="uni" placeholder="Enter university name..."></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="">Board: </label>
+                                </td>
+                                <td>
+                                    <input type="text" name="board" placeholder="e.g. HSC-GHSEB..." id="board">
+                                </td>
+                                <td colspan="2">
+                                    <textarea name="sclName" id="school" placeholder="Enter school name... "></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="">Percentage: </label>
+                                </td>
+                                <td>
+                                    <input type="number" name="percent" placeholder="e.g. Enter percentage..." id="percent">
+                                </td>
+                                <td colspan="2">
+                                    <input type="text" name="sclCity" id="sclCity" placeholder="Enter school city..."></input>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="">Certificate: </label>
+                                </td>
+                                <td>
+                                    <input type="text" name="certificate" placeholder="Enter certificate name..." id="certificate">
+                                </td>
+                                <td>
+                                    <label for="">Certificate Institute: </label>
+                                </td>
+                                <td>
+                                    <input type="text" name="certiInsti" id="certiInsti" placeholder="Enter certificate institute...">
+                                </td>
+                            </tr>
+                            <tr> 
+                                <td>
+                                    <label for="">Project title: </label>
+                                </td>
+                                <td>
+                                    <input type="text" name="projTitle[]" placeholder="Enter project title..." id="projTitle">
+                                </td>
+                                <td colspan="2">
+                                    <textarea name="projDesc[]" id="projDesc" placeholder="Enter project description..."
+                                        style="width: 400px;"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <button type="button" id="addMoreBtn" onclick="addProj()">Add more</button>
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td colspan="4" align="center">
+                                    <button class="resumeGenBtn" type="button" onclick="resumeBuilder(event)">Generate Resume</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- resume generate  -->
+
+    <h2 class="text-center">*Download your resume</h2>
+    <div class="container bg-light" id="resume">
+
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"
+        integrity="sha512-KFHXdr2oObHKI9w4Hv1XPKc898mE4kgYx58oqsc/JqqdLMDI4YjOLzom+EMlW8HFUd0QfjfAvxSL6sEq/a42fQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
