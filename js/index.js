@@ -35,8 +35,8 @@ function resumeBuilder(event){
         return;
     }
     
-    let name = document.getElementById("name").value;
-    let jobRole = document.getElementById("jobRole").value;
+    let name = document.getElementById("name").value.toUpperCase();
+    let jobRole = document.getElementById("jobRole").value.toUpperCase();
     
     let phone = document.getElementById("phone").value;
     let email = document.getElementById("email").value;
